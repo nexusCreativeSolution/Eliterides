@@ -63,9 +63,9 @@
               <h1 class="section-title">About <span>us</span></h1>
               <h2>we sell repossessed cars</h2>
               <p>
-              Let me explain further. The vehicles we offer are repossessed cars—people take out loans from banks but fail to complete their payments. The bank then repossesses the vehicles, repairs them, and puts them up for sale at the repo yard located at 2-4 constant spring road kingston, Kingston. We, at “EliteRidesLtd,” have signed a contract with the credit union to sell these repossessed vehicles.
+              Let me explain further. The vehicles we offer are repossessed cars—people take out loans from banks but fail to complete their payments. The bank then repossesses the vehicles, repairs them, and puts them up for sale at the repo yard located at 14B Camp Road, Kingston. We, at “EliteRidesLtd,” have signed a contract with the credit union to sell these repossessed vehicles.
 
-              To purchase one, you only need to provide a picture of your driver’s license and a security deposit of 70,000 JMD. This deposit is required to release the vehicle from the repo, and it will be deducted from the final price of the car. The repo accepts payments through four banks: NCB, Scotia, Sagicor, and JN. The security deposit must be made via digital payment, which notifies the repo that the vehicle has been purchased. Once paid, you will receive a receipt for your transaction, which you must provide to me.
+              To purchase one, you only need to provide a picture of your driver’s license and a security deposit of  50,000 JMD. This deposit is required to release the vehicle from the repo, and it will be deducted from the final price of the car. The repo accepts payments through four banks: NCB, Scotia, Sagicor, and JN. The security deposit must be made via digital payment, which notifies the repo that the vehicle has been purchased. Once paid, you will receive a receipt for your transaction, which you must provide to me.
 
               Once I have the receipt, I will visit the repo, present it, arrange for the vehicle’s release, and have it delivered to the nearest police station to you for pickup.</p>
      
@@ -125,7 +125,31 @@
       </div>
     </div>
   </section>
-
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <h3 class="faq-question">What is a repossessed vehicle?</h3>
+        <p class="faq-answer">A repossessed vehicle is one that has been taken back by the lender due to non-payment by the previous owner. These vehicles are sold to recover the outstanding loan balance.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Why is an advance payment required?</h3>
+        <p class="faq-answer">The payment to the repo in advance is required to secure the vehicle and ensure it is officially marked as sold in their system. This process prevents the vehicle from being offered to other buyers while arrangements for pickup are being made.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How do you ensure transparency and security?</h3>
+        <p class="faq-answer">We completely understand concerns, especially if you’ve experienced a scam before. To give you peace of mind, here’s how we operate: we work directly with the repo yard, and all transactions are documented. You’ll receive an official receipt for the security deposit, which is made to the repo’s account, not ours. You’ll also be able to verify the vehicle’s release at the repo and pick it up at the nearest police station, ensuring complete transparency and security.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">What payment methods are accepted?</h3>
+        <p class="faq-answer">We accept payments through NCB, Scotia, Sagicor, and JN Bank.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">What happens if I don’t collect the vehicle within two days?</h3>
+        <p class="faq-answer">If the vehicle isn’t collected within two days, it will be relisted as unsold to the repo.</p>
+      </div>
+    </div>
+  </section>
     <!-- Contact Section -->
     <section id="contact">
         <div class="contact container">
@@ -963,6 +987,43 @@
       color: white;
       font-size: 1.3rem;
     }
+  .faq-section {
+    font-family: Arial, sans-serif;
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .faq-section h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+
+  .faq-item {
+    margin-bottom: 20px;
+  }
+
+  .faq-question {
+    color: #1a5276;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  .faq-answer {
+    color: #555;
+    margin: 0;
+    display: none;
+    padding-left: 10px;
+    border-left: 2px solid #1a5276;
+  }
+
+  .faq-question:hover {
+    text-decoration: underline;
+  }
 
 </style>
     <script>
@@ -993,6 +1054,16 @@
             }
           });
         });
+      const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+          const question = item.querySelector('.faq-question');
+          const answer = item.querySelector('.faq-answer');
+          question.addEventListener('click', () => {
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+          });
+        });
+    
+      
     </script>
     
 </html>
